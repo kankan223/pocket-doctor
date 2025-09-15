@@ -1,0 +1,66 @@
+:root {
+  --max-width: 900px;
+  --accent: #0066cc;
+  --green: #2d9a2d;
+  --amber: #f0ad4e;
+  --red: #d9534f;
+  --card-bg: #fff;
+  --bg: #f7f8fb;
+  --muted: #666;
+}
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 18px auto;
+  padding: 0 16px;
+}
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e6e9ef;
+  padding: 18px 0;
+}
+.site-header h1 { margin: 0; font-size: 22px; }
+.tagline { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(14,20,35,0.06);
+}
+
+textarea { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ddd; resize: vertical; }
+input[type="text"], input[type="number"], select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; box-sizing: border-box; }
+label { display: block; margin-top: 10px; font-weight: 600; font-size: 14px; }
+.row { display: flex; gap: 16px; margin-top: 8px; flex-wrap: wrap; }
+.row > div { flex: 1 1 260px; }
+
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+.chip { background:#f1f5fb; padding:6px 8px; border-radius:16px; font-size:13px; display:inline-flex; align-items:center; }
+.chip input { margin-right:6px; }
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+}
+.footer { margin-top: 20px; color: var(--muted); font-size:13px; }
+
+.conditions { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+.condition-card { border: 1px solid #eef2f7; padding:10px; border-radius:8px; min-width:160px; background:#fff; }
+
+.badge { padding:10px; border-radius:8px; color:white; display:inline-block; margin-top:8px; }
+.badge.urgent { background: var(--red); }
+.badge.gp { background: var(--amber); color: #222; }
+.badge.safe { background: var(--green); }
+
+.flash { background:#fff3cd; padding:8px; border-radius:6px; margin-bottom:12px; color:#856404; }

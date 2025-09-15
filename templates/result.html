@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Results</h2>
+  <p><strong>Session:</strong> {{ r.session_id }} • <em>{{ r.timestamp }}</em></p>
+
+  <h3>Detected / entered</h3>
+  <p>{{ r.input.text or "(no text entered)" }}</p>
+  {% if r.input.checked %}
+    <p><strong>Quick picks:</strong> {{ r.input.checked | join(', ') }}</p>
+  {% endif %}
+  {% if r.input.image %}
+    <p><strong>Uploaded image:</strong> {{ r.input.image }}</p>
+  {% endif %}
+
+  <h3>Parsed keywords</h3>
+  <p>{{ r.parsed_symptoms | join(', ') }}</p>
+
+  <h3>Top possible conditions</h3>
+  <div class="conditions">
+    {% for c in r.top_conditions %}
+      <div class="condition-card">
+        <h4>{{ c.condition }}</h4>
+        <p>Score: {{ "%.2f"|format(c.score) }}</p>
+        {% if c.recommended_tests %}
+          <p><strong>Suggested tests:</strong> {{ c.recommended_tests | join(', ') }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <h3>Urgency</h3>
+  {% if r.final_urgency == 'urgent' %}
+    <div class="badge urgent">URGENT — Seek immediate medical help</div>
+  {% elif r.final_urgency == 'see_gp' %}
+    <div class="badge gp">See a doctor soon</div>
+  {% else %}
+    <div class="badge safe">Self-care / monitor</div>
+  {% endif %}
+
+  {% if r.red_flags %}
+    <h4>Red flags detected</h4>
+    <p>{{ r.red_flags | join(', ') }}</p>
+  {% endif %}
+
+  <div style="margin-top:12px;">
+    <a class="btn" href="{{ url_for('export', session_id=r.session_id) }}">Download JSON Report</a>
+    <a class="btn" href="{{ url_for('index') }}">New session</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{
+  "conditions": [
+    {
+      "name": "Common Cold",
+      "required_symptoms": ["cough", "runny nose", "sore throat"],
+      "supporting_symptoms": ["mild fever", "sneezing", "congestion"],
+      "red_flags": [],
+      "recommended_tests": [],
+      "urgency": "self_care",
+      "base_weight": 1.0
+    },
+    {
+      "name": "Influenza (Flu)",
+      "required_symptoms": ["fever", "body ache"],
+      "supporting_symptoms": ["cough", "sore throat", "headache"],
+      "red_flags": ["difficulty breathing", "confusion", "persistent vomiting"],
+      "recommended_tests": ["rapid_influenza_test", "CBC"],
+      "urgency": "see_gp",
+      "base_weight": 1.2
+    },
+    {
+      "name": "Conjunctivitis (Pink Eye)",
+      "required_symptoms": ["red eye", "eye discharge"],
+      "supporting_symptoms": ["itchy eye", "tearing"],
+      "red_flags": ["severe_eye_pain", "vision_loss"],
+      "recommended_tests": ["eye_culture_if_severe"],
+      "urgency": "see_gp",
+      "base_weight": 0.9
+    },
+    {
+      "name": "Cellulitis (Skin Infection)",
+      "required_symptoms": ["redness", "swelling"],
+      "supporting_symptoms": ["fever", "warmth"],
+      "red_flags": ["rapid_spread", "high_fever"],
+      "recommended_tests": ["wound_culture", "CBC"],
+      "urgency": "urgent",
+      "base_weight": 1.5
+    },
+    {
+      "name": "Coronary Artery Diease (CAD)",
+      "required_symptoms": ["pain", "indigestion", "nausea"],
+      "supporting_symptoms": ["sweating"],
+      "red_flags": ["severe_pain"],
+      "recommended_tests": ["Consult a specialist"],
+      "urgency": "urgent",
+      "base_weight": 2.5
+    },
+    {
+      "name": "Urinary Tract Infection",
+      "required_symptoms": ["burning urination", "frequent urination"],
+      "supporting_symptoms": ["lower_abdominal_pain", "fever"],
+      "red_flags": ["blood_in_urine", "high_fever"],
+      "recommended_tests": ["urine_routine", "urine_culture"],
+      "urgency": "see_gp",
+      "base_weight": 1.0
+    },
+    {
+      "name": "Migraine",
+      "required_symptoms": ["severe headache", "light sensitivity"],
+      "supporting_symptoms": ["nausea", "visual_disturbance"],
+      "red_flags": ["sudden_onset_severe_headache", "loss_of_consciousness"],
+      "recommended_tests": ["neuro_imaging_if_red_flag"],
+      "urgency": "see_gp",
+      "base_weight": 0.8
+    }
+  ],
+  "synonyms": {
+    "feverish": "fever",
+    "temp": "fever",
+    "sorethroat": "sore throat",
+    "stomach pain": "abdominal pain",
+    "burning urination": "dysuria",
+    "blood in urine": "hematuria",
+    "red eye": "eye redness",
+    "eye discharge": "discharge",
+    "severe headache": "headache"
+  },
+  "red_flag_keywords": ["difficulty breathing", "chest pain", "confusion", "persistent vomiting", "loss of consciousness", "severe bleeding"]
+}

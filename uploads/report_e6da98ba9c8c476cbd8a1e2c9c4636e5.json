@@ -1,0 +1,54 @@
+{
+  "session_id": "e6da98ba9c8c476cbd8a1e2c9c4636e5",
+  "timestamp": "2025-09-15T13:05:41.956795",
+  "input": {
+    "text": "",
+    "checked": [
+      "body ache",
+      "eye discharge",
+      "redness",
+      "swelling"
+    ],
+    "duration": "",
+    "severity": "",
+    "age": "",
+    "sex": "",
+    "image": null
+  },
+  "parsed_symptoms": [
+    "swelling",
+    "body ache",
+    "eye discharge",
+    "redness"
+  ],
+  "top_conditions": [
+    {
+      "condition": "Cellulitis (Skin Infection)",
+      "score": 3.9000000000000004,
+      "recommended_tests": [
+        "wound_culture",
+        "CBC"
+      ],
+      "urgency": "urgent"
+    },
+    {
+      "condition": "Influenza (Flu)",
+      "score": 2.4,
+      "recommended_tests": [
+        "rapid_influenza_test",
+        "CBC"
+      ],
+      "urgency": "see_gp"
+    },
+    {
+      "condition": "Conjunctivitis (Pink Eye)",
+      "score": 2.1,
+      "recommended_tests": [
+        "eye_culture_if_severe"
+      ],
+      "urgency": "see_gp"
+    }
+  ],
+  "final_urgency": "urgent",
+  "red_flags": []
+}

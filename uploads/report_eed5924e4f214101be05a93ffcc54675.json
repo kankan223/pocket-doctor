@@ -1,0 +1,42 @@
+{
+  "session_id": "eed5924e4f214101be05a93ffcc54675",
+  "timestamp": "2025-09-15T13:23:15.260107",
+  "input": {
+    "text": "",
+    "checked": [],
+    "duration": "",
+    "severity": "",
+    "age": "",
+    "sex": "",
+    "image": "b85a97a95fed4277b01308a945ab2182_WhatsApp_Image_2025-09-12_at_10.28.19_PM.jpeg"
+  },
+  "parsed_symptoms": [],
+  "top_conditions": [
+    {
+      "condition": "Cellulitis (Skin Infection)",
+      "score": 1.5,
+      "recommended_tests": [
+        "wound_culture",
+        "CBC"
+      ],
+      "urgency": "urgent"
+    },
+    {
+      "condition": "Influenza (Flu)",
+      "score": 1.2,
+      "recommended_tests": [
+        "rapid_influenza_test",
+        "CBC"
+      ],
+      "urgency": "see_gp"
+    },
+    {
+      "condition": "Common Cold",
+      "score": 1.0,
+      "recommended_tests": [],
+      "urgency": "self_care"
+    }
+  ],
+  "final_urgency": "urgent",
+  "red_flags": []
+}
